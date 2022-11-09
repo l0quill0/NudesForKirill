@@ -25,8 +25,9 @@ export const Comments = ({ comments, onSubmit, onCommentLiked }) => {
       </form>
       <Box>
         {comments?.map((comment) => (
-          <Box key={comment.commentId}>
+          <Box>
             <Comment
+              key={comment.commentId}
               id={comment.commentId}
               text={comment.comment}
               liked={comment.commentLiked}
